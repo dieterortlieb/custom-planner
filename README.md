@@ -1,5 +1,7 @@
 # custom-planner
 
+## Ingreas fechas
+
 Formas de hacer inputs de eventos,
 
 Fecha completa, 
@@ -30,3 +32,12 @@ e.g. el próximos lunes hay prueba de Termo,
 
 Se hace autocomplete de la fecha para el mes actual.
 Si no se ingresa una hora se hace autocomplete para evento que dura todo el día.
+
+## Path 
+
+Si quieres que te mueste las cosas que tienes que hacer en el día cuando abras una ventana nueva
+de la terminal tienes que ejecutar el código al final del ```.bashrc``` (creo). Así que ahí tienes
+que usar un path adecuado para que la función ```create_table``` no te cree una ```db``` en el
+root o home folder (L diseño). 
+
+Si solo lo vas a correr en la carpeta donde lo guardes solo pon en los path ```my_database.db```.
