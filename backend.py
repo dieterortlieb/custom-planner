@@ -2,7 +2,7 @@ import sqlite3
 from datetime import datetime, timedelta
 
 def create_table() -> None:
-    with sqlite3.connect("/Users/dieterortliebmurga/planner/my_database.db") as connection:
+    with sqlite3.connect("insert custom path") as connection:
         cursor = connection.cursor()
         
         create_table_query = '''
@@ -22,7 +22,7 @@ def create_table() -> None:
 #---------------------------------------------------------------------------
 
 def flush_table() -> None:
-    with sqlite3.connect("/Users/dieterortliebmurga/planner/my_database.db") as connection:
+    with sqlite3.connect("insert custom path") as connection:
         cursor = connection.cursor()
         query ='''
         DELETE FROM Events;
@@ -37,7 +37,7 @@ def flush_table() -> None:
 #---------------------------------------------------------------------------
 
 def add_event(name: str, date: str, end_date: str, info: str) -> None:
-    with sqlite3.connect('/Users/dieterortliebmurga/planner/my_database.db') as connection:
+    with sqlite3.connect('insert custom path') as connection:
         cursor = connection.cursor()
 
         insert_query = '''
@@ -52,7 +52,7 @@ def add_event(name: str, date: str, end_date: str, info: str) -> None:
 #---------------------------------------------------------------------------
 
 def remove_event(id: int) -> None:
-    with sqlite3.connect('/Users/dieterortliebmurga/planner/my_database.db') as connection:
+    with sqlite3.connect('insert custom path') as connection:
         cursor = connection.cursor()
         
         remove_query = f'''
@@ -66,7 +66,7 @@ def remove_event(id: int) -> None:
 #---------------------------------------------------------------------------
 
 def get_all() -> tuple:
-   with sqlite3.connect('/Users/dieterortliebmurga/planner/my_database.db') as connection:
+   with sqlite3.connect('insert custom path') as connection:
         cursor = connection.cursor() 
 
         pull_query = '''
@@ -91,7 +91,7 @@ def get_next_ndays(n_days: int) -> tuple:
         future = now + timedelta(days=n_days)
         future_str = future.strftime('%Y-%m-%d %H:%M')
 
-    with sqlite3.connect('/Users/dieterortliebmurga/planner/my_database.db') as connection:
+    with sqlite3.connect('insert custom path') as connection:
         cursor = connection.cursor()
  
         query = f'''
@@ -106,7 +106,7 @@ def get_next_ndays(n_days: int) -> tuple:
 #---------------------------------------------------------------------------
 
 def get_index() -> list:
-    with sqlite3.connect('/Users/dieterortliebmurga/planner/my_database.db') as connection:
+    with sqlite3.connect('insert custom path') as connection:
         cursor = connection.cursor()
 
         query = '''
@@ -122,7 +122,7 @@ def get_index() -> list:
 
 def get_day(day: str, end_day: str) -> tuple:
 
-    with sqlite3.connect('/Users/dieterortliebmurga/planner/my_database.db') as connection:
+    with sqlite3.connect('insert custom path') as connection:
         cursor = connection.cursor()
 
         query = '''

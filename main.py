@@ -16,7 +16,7 @@ import os
 import sys
 
 #flush_table()
-if not os.path.isfile('/Users/dieterortliebmurga/planner/my_database.db'):
+if not os.path.isfile('insert custom path'):
     create_table()
 
 if __name__ == "__main__":
