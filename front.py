@@ -27,8 +27,8 @@ def display_all(events: list) -> None:
     for event in events:
         event_id = str(event[0]).ljust(6, " ")
         event_name = str(event[1]).ljust(20, " ")
-        event_start = str(event[2]).ljust(25, " ")
-        event_end = str(event[3]).ljust(25, " ")
+        event_start = str(event[2])[:-3].ljust(25, " ")
+        event_end = str(event[3])[:-3].ljust(25, " ")
         event_descr = str(event[4]).ljust(30, " ")
 
         print(event_id + event_name + event_start + event_end + event_descr)
